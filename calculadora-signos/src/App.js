@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 import "./App.css";
+// Cria o componente SignCalculator
 const SignCalculator = () => {
+  // Define o estado inicial para a data, o signo e o erro
   const [date, setDate] = useState("");
   const [sign, setSign] = useState("");
   const [error, setError] = useState("");
-
+// Define a função handleSubmit para ser executada ao submeter o formulário
   const handleSubmit = (e) => {
     e.preventDefault();
+// Previne o comportamento padrão de submissão do formulário
 
+// Verifica se a data inserida é válida
     if (!isDateValid(date)) {
       setError("Data inválida");
       setSign("");
       return;
     }
-
+// Extrai o mês e o dia da data inserida
     const month = parseInt(date.split("-")[1]);
     const day = parseInt(date.split("-")[2]);
 
+// Criando uma lista com as informações dos signos, contendo nome, data de início e fim
     const signList = [
       { name: "Aquário", start: [1, 20], end: [2, 18] },
       { name: "Peixes", start: [2, 19], end: [3, 20] },
@@ -31,19 +36,21 @@ const SignCalculator = () => {
       { name: "Sagitário", start: [11, 22], end: [12, 21] },
       { name: "Capricórnio", start: [12, 22], end: [1, 19] },
     ];
-
+    // Encontrando as informações do signo da pessoa com a função find() e a lista de signos criada acima
     const signInfo = signList.find(
       (sign) =>
         (month === sign.start[0] && day >= sign.start[1]) ||
         (month === sign.end[0] && day <= sign.end[1])
     );
-
+// Atualiza o estado do signo e limpa o estado do erro
     setSign(signInfo.name);
     setError("");
   };
-
+// Define a função isDateValid para verificar se a data inserida é válida
   const isDateValid = (dateString) => {
+    // Criando um objeto Date a partir da string da data
     const dateObj = new Date(dateString);
+    // Verificando se a string é válida, se o ano é maior que 1900 e se o ano é menor que o ano atual
     return (
       dateString &&
       !isNaN(dateObj.getTime()) &&
@@ -51,6 +58,7 @@ const SignCalculator = () => {
       dateObj.getFullYear() < new Date().getFullYear()
     );
   };
+// Renderiza o componente com o formulário, a mensagem de erro (se houver) e o signo (se houver)
 
   return (
     <div class="container">
