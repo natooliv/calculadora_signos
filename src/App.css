@@ -41,8 +41,8 @@ input[type="date"] {
   border-bottom: 2px solid ;
   padding: 10px;
   font-size: 16px;
-  color: rgb(206, 196, 196);
-  background-color: rgba(255, 255, 255, 0.277);
+  color: rgb(253, 249, 249);
+  background-color: rgba(255, 255, 255, 0.915);
  
 }
 button[type="submit"] {
@@ -51,7 +51,7 @@ button[type="submit"] {
   padding: 1px 25px;
   font-size: 16px;
   color: white;
-  background-color: #bbbcc16b;
+  background-color: #dedfe4f3;
   cursor: pointer;
   transition: all 0.3s ease;
   
