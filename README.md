@@ -2,7 +2,7 @@
 
 Uma aplicação web  que recebe a data de nascimento do usuário e retorna seu signo do zodíaco.
 
-##Funcionalidades
+## Funcionalidades
 
 - Verificar se a data de nascimento é válida
 - Calcular o signo do usuário com base na data de nascimento
