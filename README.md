@@ -20,3 +20,5 @@ Uma aplicação web  que recebe a data de nascimento do usuário e retorna seu s
 
 > Para utilizar este app no seu navegador, recomenda-se utilizar a resolução de tela de 360 x 835 (360 pixels de largura por 835 pixels de altura).
 > Você pode utilizar um plugin do `Chrome`, como o [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) para ajustar a resolução da janela do navegador.
+
+calculadora-signos.vercel.app
